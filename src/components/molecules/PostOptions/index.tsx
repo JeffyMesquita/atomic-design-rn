@@ -2,25 +2,27 @@ import React from "react";
 
 import { View } from "react-native";
 
-import { styles } from "../../../pages/Feed/styles";
+import { styles } from "./styles";
 
 import {
   FavoriteIcon,
   CommentIcon,
   MessengerIcon,
   SaveIcon,
-} from '../../../global/styles/icons';
+} from "../../../global/styles/icons";
+
+import { ButtonIcon } from "../../atoms/ButtonIcon";
 
 export function PostOptions() {
   return (
     <View style={styles.postOptions}>
       <View style={styles.postOptionsSide}>
-        <FavoriteIcon style={styles.postOptionsIcon} />
-        <CommentIcon style={styles.postOptionsIcon} />
-        <MessengerIcon style={styles.postOptionsIcon} />
+        <ButtonIcon icon={FavoriteIcon} />
+        <ButtonIcon icon={CommentIcon} />
+        <ButtonIcon icon={MessengerIcon} />
       </View>
 
-      <SaveIcon />
+      <ButtonIcon icon={SaveIcon} />
     </View>
   );
 }

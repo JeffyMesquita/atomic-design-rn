@@ -10,9 +10,9 @@ type Props = TextProps & {
   value: string;
 }
 
-export function PostDescription({ value }: Props) {
+export function PostLiked({ value }: Props) {
   return (
-    <Text style={styles.description}>
+    <Text style={styles.likes}>
       {value}
     </Text>
   );

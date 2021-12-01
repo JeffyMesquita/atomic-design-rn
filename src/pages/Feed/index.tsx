@@ -17,9 +17,9 @@ import {
 import { Posts } from '../../components/templates/Posts'
  
 import { profiles } from '../../utils/profiles';
-import { posts } from '../../utils/posts';
 
 import { styles } from './styles';
+import { posts } from '../../utils/posts';
 
 export function Feed() {
   return (
@@ -53,7 +53,7 @@ export function Feed() {
         />
       </View>     
 
-      <Posts />
+      <Posts data={posts}/>
     </View>
   );
 }

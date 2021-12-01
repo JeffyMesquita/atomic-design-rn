@@ -1,14 +1,14 @@
 import React from "react";
 
-import { View, Image, Text, ImageProps } from "react-native";
+import { View, ImageProps } from "react-native";
 
 import { PostDescription } from "../../atoms/PostDescription";
 import { PostOptions } from "../../molecules/PostOptions";
-import { PostPhoto } from '../../atoms/PostPhoto';
 import { PostHeader } from "../../molecules/PostHeader";
 import { PostAbout } from "../../molecules/PostAbout";
+import { PostPhoto } from '../../atoms/PostPhoto';
 
-import { styles } from "../../../pages/Feed/styles";
+import { styles } from "./styles";
 
 type Profile = {
   id: string;
@@ -46,7 +46,7 @@ export function Post({ data }: Props) {
           avatar={data.lastLiked.avatar}
           likes={data.likes}
         />
-        <PostDescription description={data.description} />
+        <PostDescription value={data.description} />
       </View>
     </View>
   );
